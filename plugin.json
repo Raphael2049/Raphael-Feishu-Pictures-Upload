@@ -2,7 +2,7 @@
   "name": "多维表格批量传图",
   "description": "批量上传图片至多维表格指定图片字段",
   "version": "1.0.0",
-  "app_id": "你的飞书应用ID", // 替换为实际ID
+  "app_id": "你的飞书应用ID", 
   "permissions": [
     "bitable:app:write",
     "bitable:app:readonly",
@@ -15,10 +15,7 @@
       "label": "批量上传图片",
       "icon": "https://sf3-cn.feishucdn.com/static-resource/v1/v2_icon_drive_image/png/v2_icon_drive_image_32.png",
       "webview": {
-        // 本地调试：填Vite开发服务地址（npm run dev后控制台会显示）
         "url": "http://localhost:5173/",
-        // 线上部署：替换为dist目录的线上地址，如 "https://xxx.com/dist/"
-        // "url": "https://xxx.com/dist/",
         "width": 600,
         "height": 450
       }
