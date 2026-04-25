@@ -1,0 +1,24 @@
+{
+  "name": "多维表格批量传图",
+  "description": "批量上传图片至多维表格指定图片字段",
+  "version": "1.0.0",
+  "app_id": "你的飞书应用ID",
+  "permissions": [
+    "bitable:app:write",
+    "bitable:app:readonly",
+    "tenant.media.upload",
+    "drive:file:write"
+  ],
+  "extensions": [
+    {
+      "type": "block:sheet:action", 
+      "label": "批量上传图片", 
+      "icon": "https://xxx.png", 
+      "webview": {
+        "url": "index.html",
+        "width": 600,
+        "height": 400
+      }
+    }
+  ]
+}
