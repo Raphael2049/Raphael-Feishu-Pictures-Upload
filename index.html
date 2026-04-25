@@ -1,13 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Base Script</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/index.tsx"></script>
-  </body>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>批量上传图片</title>
+  <!-- 引入飞书JS SDK -->
+  <script src="https://sf3-cn.feishucdn.com/obj/ee-appcenter/static/js/sdk/lark.js"></script>
+  <!-- 可选：引入样式库美化界面 -->
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="container">
+    <h3>批量上传图片至多维表格</h3>
+    <!-- 1. 选择图片 -->
+    <div class="upload-area">
+      <label>选择图片：</label>
+      <input type="file" id="fileInput" multiple accept="image/*">
+    </div>
+    <!-- 2. 选择目标图片字段 -->
+    <div class="field-area">
+      <label>目标字段：</label>
+      <select id="fieldSelect"></select>
+    </div>
+    <!-- 3. 上传按钮 & 进度 -->
+    <button id="uploadBtn">开始上传</button>
+    <div id="progress" style="margin-top: 10px;"></div>
+    <div id="result" style="margin-top: 10px;"></div>
+  </div>
+
+  <!-- 业务逻辑脚本 -->
+  <script src="index.js"></script>
+</body>
 </html>
